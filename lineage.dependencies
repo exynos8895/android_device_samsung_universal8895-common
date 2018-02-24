@@ -6,5 +6,9 @@
     {
         "repository": "android_kernel_samsung_universal8895",
         "target_path": "kernel/samsung/universal8895"
+    },
+    {
+        "repository": "android_packages_resources_devicesettings",
+        "target_path": "packages/resources/devicesettings"
     }
 ]
