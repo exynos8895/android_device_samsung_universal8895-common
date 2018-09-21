@@ -75,6 +75,9 @@ TARGET_COPY_OUT_VENDOR := system/vendor
 # Device Tree
 BOARD_USES_DT := true
 
+# Renderscript
+OVERRIDE_RS_DRIVER := libRSDriverArm.so
+
 # Wifi
 TARGET_USES_64_BIT_BCMDHD        := true
 BOARD_WLAN_DEVICE                := bcmdhd
