@@ -29,5 +29,20 @@ PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 # A list of dpis to select prebuilt apk, in precedence order.
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
+# Wifi
+PRODUCT_PACKAGES += \
+    macloader \
+    wifiloader \
+    hostapd \
+    wificond \
+    wifilogd \
+    wlutil \
+    libwpa_client \
+    wpa_supplicant \
+    wpa_supplicant.conf \
+    android.hardware.wifi@1.0-service \
+    android.hardware.wifi@1.0 \
+    android.hardware.wifi@1.0-impl
+
 # call the proprietary setup
 $(call inherit-product, vendor/samsung/universal8895-common/universal8895-common-vendor.mk)
