@@ -28,3 +28,6 @@ PRODUCT_AAPT_CONFIG := xlarge
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 # A list of dpis to select prebuilt apk, in precedence order.
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
+
+# call the proprietary setup
+$(call inherit-product, vendor/samsung/universal8895-common/universal8895-common-vendor.mk)
