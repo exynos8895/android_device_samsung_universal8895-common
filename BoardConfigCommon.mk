@@ -84,6 +84,9 @@ OVERRIDE_RS_DRIVER := libRSDriverArm.so
 # Backlight
 BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
 
+# Recovery
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/ramdisk/etc/fstab.samsungexynos8895
+
 # Seccomp filters
 BOARD_SECCOMP_POLICY += $(LOCAL_PATH)/seccomp
 
