@@ -84,6 +84,9 @@ OVERRIDE_RS_DRIVER := libRSDriverArm.so
 # Backlight
 BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
 
+# Seccomp filters
+BOARD_SECCOMP_POLICY += $(LOCAL_PATH)/seccomp
+
 # Wifi
 TARGET_USES_64_BIT_BCMDHD        := true
 BOARD_WLAN_DEVICE                := bcmdhd
