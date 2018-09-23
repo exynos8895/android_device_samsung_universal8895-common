@@ -19,6 +19,9 @@ LOCAL_PATH := device/samsung/universal8895-common
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
+
 # Firmware
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
@@ -80,6 +83,10 @@ BOARD_USES_DT := true
 
 # Renderscript
 OVERRIDE_RS_DRIVER := libRSDriverArm.so
+
+# Bluetooth
+BOARD_CUSTOM_BT_CONFIG := $(LOCAL_PATH)/bluetooth/libbt_vndcfg.txt
+BOARD_HAVE_BLUETOOTH := true
 
 # Backlight
 BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
