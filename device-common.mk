@@ -44,6 +44,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.1-service.clearkey \
     android.hardware.drm@1.0-impl
 
+# Flat device tree for boot image
+PRODUCT_PACKAGES += \
+    dtbhtoolExynos
+
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
