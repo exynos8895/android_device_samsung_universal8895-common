@@ -84,3 +84,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.zygote.disable_gl_preload=true \
     ro.config.vc_call_vol_steps=5 \
     debug.sf.latch_unsignaled=1
+
+# Wifi
+PRODUCT_PROPERTY_OVERRIDES += \
+    wifi.direct.interface=p2p-dev-wlan0
