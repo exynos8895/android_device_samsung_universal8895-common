@@ -84,6 +84,9 @@ BOARD_USES_DT := true
 # Renderscript
 OVERRIDE_RS_DRIVER := libRSDriverArm.so
 
+# Samsung HALs
+TARGET_POWERHAL_VARIANT := samsung
+
 # Bluetooth
 BOARD_CUSTOM_BT_CONFIG := $(LOCAL_PATH)/bluetooth/libbt_vndcfg.txt
 BOARD_HAVE_BLUETOOTH := true
