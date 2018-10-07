@@ -62,6 +62,7 @@ BOARD_KERNEL_IMAGE_NAME := Image
 #BOARD_KERNEL_CMDLINE := The bootloader ignores the cmdline from the boot.img
 BOARD_KERNEL_SEPARATED_DT := true
 TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
+BOARD_ROOT_EXTRA_FOLDERS += efs cpefs
 
 # Kernel
 TARGET_KERNEL_ARCH := arm64
@@ -132,6 +133,9 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 
 # MACLOADER
 BOARD_HAVE_SAMSUNG_WIFI          := true
+
+BOARD_SEPOLICY_DIRS += device/samsung/universal8895-common/sepolicy
+BOARD_SEPOLICY_VERS := $(PLATFORM_SDK_VERSION).0
 
 # Shims
 TARGET_LD_SHIM_LIBS += \

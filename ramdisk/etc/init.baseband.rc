@@ -1,5 +1,4 @@
 on init
-    mkdir /efs 0771 radio system
     symlink /dev/block/platform/11120000.ufs/by-name/RADIO /dev/mbin0
     restorecon /dev/mbin0
 
@@ -16,13 +15,6 @@ on fs
     # /efs/factory.prop for Dual / Single SIM settings
     chown radio radio /efs/factory.prop
     chmod 0600 /efs/factory.prop
-
-    # For cpefs partition
-    mkdir /cpefs 0771 radio system
-    wait /dev/block/platform/11120000.ufs/by-name/CPEFS
-    mount ext4 /dev/block/platform/11120000.ufs/by-name/CPEFS /cpefs nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic
-    chown radio system /cpefs
-    chmod 0771 /cpefs
 
     #For cpdebug partition
     wait /dev/block/platform/11120000.ufs/by-name/EFS
