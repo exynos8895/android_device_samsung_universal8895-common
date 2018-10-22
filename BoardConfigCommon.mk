@@ -84,6 +84,9 @@ BOARD_USES_DT := true
 # Renderscript
 OVERRIDE_RS_DRIVER := libRSDriverArm.so
 
+# Graphics
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
+
 # Samsung HALs
 TARGET_POWERHAL_VARIANT := samsung
 
