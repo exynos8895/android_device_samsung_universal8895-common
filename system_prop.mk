@@ -89,3 +89,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.direct.interface=p2p-dev-wlan0 \
     persist.debug.wfd.enable=1
+
+# Configstore
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3
