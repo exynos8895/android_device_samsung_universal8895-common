@@ -128,3 +128,8 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 
 # MACLOADER
 BOARD_HAVE_SAMSUNG_WIFI          := true
+
+# Shims
+TARGET_LD_SHIM_LIBS += \
+    /system/lib/libexynoscamera.so|/vendor/lib/libexynoscamera_shim.so \
+    /system/lib64/libexynoscamera.so|/vendor/lib64/libexynoscamera_shim.so
