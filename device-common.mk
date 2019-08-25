@@ -62,6 +62,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     dtbhtoolExynos
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-service \
+    android.hardware.gatekeeper@1.0-impl
+
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
