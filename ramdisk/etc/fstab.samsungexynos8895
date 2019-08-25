@@ -7,7 +7,7 @@
 /dev/block/platform/11120000.ufs/by-name/RECOVERY       /recovery   emmc    defaults                                                                                                          defaults
 /dev/block/platform/11120000.ufs/by-name/SYSTEM         /system     ext4    ro,errors=panic,noload                                                                                            wait,recoveryonly
 /dev/block/platform/11120000.ufs/by-name/CACHE          /cache      ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic                           wait,check
-/dev/block/platform/11120000.ufs/by-name/USERDATA       /data       ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic                           wait,check,encryptable=footer
+/dev/block/platform/11120000.ufs/by-name/USERDATA       /data       ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic                           wait,check,encryptable=/dev/block/platform/11120000.ufs/by-name/TOMBSTONES
 /dev/block/platform/11120000.ufs/by-name/EFS            /efs        ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic                           wait,check
 
 # ADD FOR GOTA
