@@ -18,6 +18,31 @@ LOCAL_PATH := device/samsung/universal8895-common
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio.common-util \
+    android.hardware.audio.common@2.0-util \
+    android.hardware.audio.common@2.0 \
+    android.hardware.audio.common@4.0-util \
+    android.hardware.audio.common@4.0 \
+    android.hardware.audio.effect@2.0 \
+    android.hardware.audio.effect@4.0 \
+    android.hardware.audio@2.0 \
+    android.hardware.audio@4.0 \
+    android.hardware.soundtrigger@2.0-core \
+    android.hardware.soundtrigger@2.0 \
+    android.hardware.soundtrigger@2.1 \
+    android.hardware.audio@2.0-service \
+    android.hardware.audio.effect@2.0-impl \
+    android.hardware.audio@2.0-impl \
+    android.hardware.soundtrigger@2.0-impl \
+    libalsautils \
+    libeffects \
+    libspeexresampler \
+    libaudioutils \
+    audio.a2dp.default \
+    libtinycompress
+
 # Boot animation
 TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_TEXTURE_CACHE := true
