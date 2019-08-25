@@ -108,6 +108,10 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl \
     android.hardware.health@2.0-service
 
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keylayout/gpio_keys.kl:system/usr/keylayout/gpio_keys.kl
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.samsung
