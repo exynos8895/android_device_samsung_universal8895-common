@@ -87,6 +87,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.1-service.clearkey \
     android.hardware.drm@1.0-impl
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-service.samsung
+
 # Flat device tree for boot image
 PRODUCT_PACKAGES += \
     dtbhtoolExynos
