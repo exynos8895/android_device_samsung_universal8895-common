@@ -116,6 +116,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio_keys.kl:system/usr/keylayout/gpio_keys.kl
 
+# keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0 \
+    android.hardware.keymaster@3.0-service \
+    android.hardware.keymaster@3.0-impl \
+    libkeymaster3device
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.samsung
