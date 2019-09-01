@@ -1,3 +1,6 @@
+# APNS
+etc/apns-conf.xml
+
 # Audio
 lib/hw/audio.playback_record.default.so
 lib/hw/audio.primary.universal8895.so
