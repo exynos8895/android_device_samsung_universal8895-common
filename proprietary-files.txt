@@ -112,7 +112,7 @@ vendor/bin/hw/gpsd
 vendor/bin/hw/vendor.samsung.hardware.gnss@1.0-service
 vendor/etc/gnss/gps.cer
 vendor/etc/gnss/gps.xml
-vendor/etc/init/init.gps.rc|b807905f49c6bb51a1d11b2d9adc9f84d2fb63e5
+vendor/etc/init/init.gps.rc
 vendor/etc/init/vendor.samsung.hardware.gnss@1.0-service.rc
 vendor/lib/libwrappergps.so
 vendor/lib64/hw/android.hardware.gnss@1.1-impl.so
@@ -242,7 +242,7 @@ vendor/lib64/libMcClient.so
 # NFC
 etc/libnfc-nci.conf
 etc/nfc_key
-etc/nfcee_access.xml|b59b3bb228f22e5997bdd64392287718792c331d
+etc/nfcee_access.xml
 lib64/android.hardware.nfc@1.0.so
 lib64/android.hardware.nfc@1.1.so
 lib64/vendor.samsung.hardware.nfc@1.1.so
@@ -341,7 +341,7 @@ vendor/lib/libstagefright_soft_g711dec.so
 # WiFi
 vendor/bin/hw/macloader
 vendor/bin/hw/mfgloader
-vendor/etc/init/wifi.rc|194ef6e0e51f4b9a60d229b927724d06c83d30db
+vendor/etc/init/wifi.rc
 vendor/etc/init/wifi_brcm.rc
 vendor/etc/wifi/bcmdhd_clm.blob
 vendor/etc/wifi/bcmdhd_mfg.bin_b0
