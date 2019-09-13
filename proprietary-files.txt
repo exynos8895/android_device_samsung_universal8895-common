@@ -74,8 +74,8 @@ vendor/etc/init/android.hardware.bluetooth@1.0-service.rc
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl.so
 vendor/lib64/libbt-vendor.so
 
-# Bluetooth - APT-X
-lib64/libaptX_encoder.so
+# Bluetooth (aptX) - from crosshatch - QP1A.190711.020
+product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
 # Camera
 vendor/lib/camera.device@1.0-impl.so|25304a23d422d833af6aacaf735d64bc9e6966a2
