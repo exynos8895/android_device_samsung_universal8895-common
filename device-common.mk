@@ -246,6 +246,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libgui_vendor
 
+# s-pen
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/samsung-sec_e-pen.idc:system/usr/idc/sec_e-pen.idc
+
 # TextClassifier
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
