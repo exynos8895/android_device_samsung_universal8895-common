@@ -1,6 +1,4 @@
 on init
-    ffu
-
 # [ SEC_SELINUX_PORTING_COMMON
     # for audit message
     chown system system /proc/avc_msg
@@ -94,7 +92,6 @@ on post-fs
     # make fsdbg on /dev for filesystem debug info.
     mkdir /dev/fsdbg 0775 root system
 
-    omc_update
     start scs
 
 on late-fs
@@ -140,7 +137,6 @@ on post-fs-data
     start mobicore
 
     # icd
-    check_icd
     chown system system /dev/icd
     chmod 0644 /dev/icd
     chown system system /dev/icdr
@@ -181,9 +177,6 @@ on post-fs-data
     mkdir /data/.cas 0771
     chown media system /data/.cas
     chmod 0771 /data/.cas
-
-    # Decide to trigger LACKING_STORAGE_BOOT
-    trigger_lsb
 
     # barnswallow Daemon socket
     mkdir /dev/socket/bsd 0770 system system
@@ -326,7 +319,6 @@ on post-fs-data
     chown mediacodec mediacodec /data/vendor/mediacodec/fruc_assets/fruc_kernels.exynos9610.bin
 
     # FINGERPRINT
-    fp_migration /data/biometrics /data/vendor/biometrics
     mkdir /data/vendor/biometrics 0770 system system
     restorecon_recursive /data/vendor/biometrics
 
@@ -1043,53 +1035,9 @@ on property:vold.decrypt=trigger_restart_framework
     # A/B update verifier that marks a successful boot.
     exec_start update_verifier
 
-# PDP : Preloaded-Data preservation ->
-
-on property:ro.crypto.state=unencrypted
-    pdp c_ready
-
-on property:ro.crypto.type=file
-    pdp c_ready
-
-on property:ro.crypto.type=block && property:vold.decrypt=trigger_load_persist_props
-    pdp c_ready
-
-# on property:ro.crypto.type=block && property:vold.decrypt=trigger_restart_framework
-#     pdp prp_fbe
-#     pdp restore
-#     pdp chk_apk
-#     pdp backup
-
-# on property:ro.crypto.type=file && property:vold.post_fs_data_done=1
-#     pdp prp_fbe
-#     pdp restore
-#     pdp chk_apk
-#     pdp backup
-
 on property:vold.post_fs_data_done=1
     chown root system /dev/kmsg
     chmod 0660 /dev/kmsg
-    pdp prp_fbe
-    pdp restore
-    pdp chk_apk
-    pdp backup
-
-on property:sys.boot.end_package=1
-    pdp LEDstate
-
-# For OMC media concept
-on property:sys.pdp.action=cekeyunlock
-    pdp media
-# For CSC media concept
-on property:storage.preload.complete=1
-    pdp media
-
-on property:sys.boot_completed=1
-    pdp result
-
-on property:persist.sys.setupwizard=FINISH
-    pdp remove
-# PDP <-
 
 # LPM
 service lpm /system/bin/lpm
@@ -1111,9 +1059,6 @@ service auditd /system/bin/auditd -k
     seclabel u:r:auditd:s0
     disabled
     oneshot
-
-on property:sys.seandroid.restoreapp=start
-    restore_appdata    
 # ] SEC_SELINUX_PORTING_COMMON
 
 # sem_daemon
@@ -1158,13 +1103,11 @@ service icd /vendor/bin/icd
     class main
     user system
     group system log
-    onrestart check_icd
     disabled
     oneshot
 
 # icd
 on property:init.svc.media=restarting
-    check_icd
     start icd
 
 # strongSwan VPN
