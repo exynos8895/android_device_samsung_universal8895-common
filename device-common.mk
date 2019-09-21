@@ -160,7 +160,8 @@ PRODUCT_PACKAGES += \
     libnfc_nci_jni \
     NfcNci \
     Tag \
-    com.android.nfc_extras
+    com.android.nfc_extras \
+    libclang_rt.ubsan_standalone-aarch64-android
 
 # Power
 PRODUCT_PACKAGES += \
