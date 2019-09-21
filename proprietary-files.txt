@@ -77,6 +77,22 @@ vendor/lib64/libbt-vendor.so
 # Bluetooth - APT-X
 lib64/libaptX_encoder.so
 
+# Camera
+vendor/lib/camera.device@1.0-impl.so|25304a23d422d833af6aacaf735d64bc9e6966a2
+vendor/lib/camera.device@3.2-impl.so|5a5ebe580e1dff617355632869846f9d89aa597f
+vendor/lib/camera.device@3.3-impl.so|5649ba327570d70eb4164d35c900130a01c04bfe
+vendor/lib/camera.device@3.4-external-impl.so|c4bbc9d663277f056a772b9d5da2b20ee2a77248
+vendor/lib/camera.device@3.4-impl.so|06edcd7840554d3ed8dff643bb4503511f12766e
+vendor/lib/camera.device@3.5-external-impl.so|369284501b9a6918c5538c430e96d5a9b9cea0e6
+vendor/lib/camera.device@3.5-impl.so|0bbdf41f7733750c4f54175888af3778f7930986
+vendor/lib64/camera.device@1.0-impl.so|1b0781a282a91f144b2ae9295854cbbe199f949a
+vendor/lib64/camera.device@3.2-impl.so|aa357f2eb0f19de07127a450e605c8e39a477b48
+vendor/lib64/camera.device@3.3-impl.so|4f1ad80b125981493d7c7127a38ada7cdc3e4a27
+vendor/lib64/camera.device@3.4-external-impl.so|dfbb8be3c1f63e1231edc421acf8078bdda13a6f
+vendor/lib64/camera.device@3.4-impl.so|53dc11d354cdadd67da0f19bc688fbc2ee77d09d
+vendor/lib64/camera.device@3.5-external-impl.so|d40e3aae3ec706be6548bc101e5dfe89e8c2c848
+vendor/lib64/camera.device@3.5-impl.so|ff6cc5d110534ef316786bbab4a4bc6970627f98
+
 # DRM
 vendor/lib/liboemcrypto.so
 vendor/lib/mediadrm/libwvdrmengine.so
