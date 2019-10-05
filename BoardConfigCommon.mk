@@ -54,6 +54,9 @@ TARGET_2ND_CPU_VARIANT := cortex-a53.a57
 # Binder
 TARGET_USES_64_BIT_BINDER := true
 
+# Apex
+DEXPREOPT_GENERATE_APEX_IMAGE := true
+
 # Extracted with libbootimg
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
