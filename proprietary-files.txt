@@ -184,6 +184,10 @@ vendor/lib64/libhwc2onfbadapter.so
 vendor/lib64/libion_exynos.so
 vendor/lib64/libmpp.so
 
+# vulkan
+vendor/lib/hw/vulkan.exynos5.so|17c8c848aa0bd14d384a4bf22050992eb299ea41
+vendor/lib64/hw/vulkan.exynos5.so|424508942221ea28fab376e7730dd5b35dd5f1c4
+
 # Hotword Enrollment
 -priv-app/HotwordEnrollmentOKGoogleExCORTEXM4/HotwordEnrollmentOKGoogleExCORTEXM4.apk;PRESIGNED
 -priv-app/HotwordEnrollmentXGoogleExCORTEXM4/HotwordEnrollmentXGoogleExCORTEXM4.apk;PRESIGNED
