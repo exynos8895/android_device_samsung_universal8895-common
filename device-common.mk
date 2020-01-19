@@ -226,6 +226,7 @@ PRODUCT_PACKAGES += \
     init.samsung.rc \
     init.samsungexynos8895.rc \
     init.samsungexynos8895.usb.rc \
+    mobicore.rc \
     ueventd.samsungexynos8895.rc
 
 # RenderScript

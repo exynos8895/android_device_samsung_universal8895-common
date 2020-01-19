@@ -885,13 +885,6 @@ service argos-daemon /vendor/bin/argosd
     user system
     group system radio
 
-# MobiCore startup
-#    service mobicore /system/bin/mcDriverDaemon -r /system/app/020a0000000000000000000000000000.drbin -r /system/app/mcRegistry/FFFFFFFFD00000000000000000000016.tlbin
-#    user drmrpc
-#    group drmrpc
-#    class core
-#    seclabel u:r:tee:s0
-
 #service trustonic-proxy /system/bin/trustonic_tee_proxy
 #    class core
 #    user system
