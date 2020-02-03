@@ -286,7 +286,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-service.universal8895
+    android.hardware.vibrator@1.0-service.samsung-haptic
 
 # Wifi
 PRODUCT_PACKAGES += \
