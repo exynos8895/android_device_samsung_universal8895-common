@@ -308,34 +308,35 @@ lib64/omx/libOMX.Exynos.WMV.Decoder.so
 
 # RIL
 lib/libsecnativefeature.so
-lib/libsecril-client.so
-lib/vendor.samsung.hardware.radio.channel@1.0.so
-lib/vendor.samsung.hardware.radio.secbridge@1.0.so
-lib/vendor.samsung.hardware.radio.sechook@1.0.so
 lib64/libsecnativefeature.so
-lib64/libsecril-client.so
-lib64/vendor.samsung.hardware.radio.channel@1.0.so
-lib64/vendor.samsung.hardware.radio.configsvc@1.0.so
-lib64/vendor.samsung.hardware.radio.secbridge@1.0.so
-lib64/vendor.samsung.hardware.radio.sechook@1.0.so
-vendor/bin/cbd
-vendor/bin/hw/rild
-vendor/bin/hw/vendor.samsung.hardware.radio.configsvc@1.0-service
 vendor/etc/init/init.vendor.rilchip.rc
 vendor/etc/init/init.vendor.rilcommon.rc
-vendor/etc/init/vendor.samsung.hardware.radio.configsvc@1.0-service.rc
-vendor/lib/libreference-ril.so
-vendor/lib/libril.so
-vendor/lib/librilutils.so
-vendor/lib/libsec-ril-dsds.so
-vendor/lib/libsec-ril.so
-vendor/lib/libvndsecril-client.so
-vendor/lib64/libreference-ril.so
-vendor/lib64/libril.so
-vendor/lib64/librilutils.so
-vendor/lib64/libsec-ril-dsds.so
-vendor/lib64/libsec-ril.so
-vendor/lib64/libvndsecril-client.so
+
+# RIL - from starlte - G960FXXU8DTC5
+vendor/bin/cbd|c2e2aeb6a6e43246b70b61099015e9c591b36e83
+vendor/bin/hw/rild|245f25500160c84e82b6a2bd4f683c6de3855c62
+vendor/lib/libreference-ril.so|4f257006cfc4ae3a092caa64e58c5bf00c000f5a
+vendor/lib/libril.so|2ec5cf60095fc75fe5f62476582ccffdf656d78b
+vendor/lib/librilutils.so|e65673f0a88d3e02d1b25a0213779f7d89fd1519
+vendor/lib/libsec-ril-dsds.so|1015100fd3d3fb4643c8f379c9c44a4eeddae18d
+vendor/lib/libsec-ril.so|30d08dac8a9c0940539c74d1b6f60b68cd6db8a5
+vendor/lib/libsec_semRil.so|586561e7ea50c9fbe9beebc05f4001fc06843981
+vendor/lib/libvkmanager_vendor.so|a107fcc6f93707f3dcc3c4922069a28399e4f0a8
+vendor/lib/libvndsecril-client.so|4f9c59b0a5e40af38402a3f2cb79f12eb023c207
+vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so|0773244743a3d0a69ea5f24daf98d2e77a4a23df
+vendor/lib/vendor.samsung.hardware.radio.channel@2.0.so|8c0670df1103803723e176ffc74d301ea90cd6a1
+vendor/lib/vendor.samsung.hardware.radio@2.0.so|b1e8788b5925405e29e8d0515f1f061e46202bf6
+vendor/lib64/libreference-ril.so|f8a789594f5e1b8e2635ce66f7b8ffdb494fcf54
+vendor/lib64/libril.so|fbb6239e903e1d85ca25b0a1995ce4c35d07f86a
+vendor/lib64/librilutils.so|9d226310feec99e51fd4c39577f84a59a6443d8e
+vendor/lib64/libsec-ril-dsds.so|6c6c898b536b4d93b6adffe8ad3d5d0ce4dde46e
+vendor/lib64/libsec-ril.so|9edeb13c1688b7f86669bb968f4fd8f6eeaefd02
+vendor/lib64/libsec_semRil.so|06829a5d3b30049f535b481a448e07585d455702
+vendor/lib64/libvkmanager_vendor.so|f874a844e9c0dea59104bd00bbb1f663abba02fa
+vendor/lib64/libvndsecril-client.so|d2a5ac7bd37748659aa36dc9880dca4a8ea80353
+vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so|9a252e8f68669a51a477e5d5c58e87471faff260
+vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so|79295a294408976c751aaf0c05b120ecdcdbe095
+vendor/lib64/vendor.samsung.hardware.radio@2.0.so|ab8fc2a827261521e4d5899972d4773cc1314561
 
 # Sensors
 vendor/bin/hw/lhd
