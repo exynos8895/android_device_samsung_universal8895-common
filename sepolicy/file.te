@@ -1,0 +1,4 @@
+type batch_io_device, dev_type;
+
+# sysfs types
+type sysfs_graphics, fs_type, sysfs_type;

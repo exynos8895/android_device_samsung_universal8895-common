@@ -1,0 +1,2 @@
+allow hal_gatekeeper_default efs_file:file { open read };
+allow hal_gatekeeper_default tee_device:chr_file { open read write };
