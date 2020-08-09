@@ -1,0 +1,2 @@
+# LED
+genfscon sysfs /devices/virtual/sec/led/led_blink u:object_r:sysfs_graphics:s0

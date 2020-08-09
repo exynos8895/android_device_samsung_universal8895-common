@@ -1,0 +1,5 @@
+allow hal_sensors_default efs_file:dir search;
+allow hal_sensors_default sysfs:file { read write getattr open };
+
+# sensor_device
+allow hal_sensors_default sensor_device:chr_file rw_file_perms;

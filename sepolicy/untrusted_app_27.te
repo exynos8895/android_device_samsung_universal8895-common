@@ -1,0 +1,2 @@
+# /dev/mali0
+allow untrusted_app_27 gpu_device:chr_file { ioctl read write };

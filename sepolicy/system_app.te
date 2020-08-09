@@ -1,0 +1,4 @@
+allow system_app proc_pagetypeinfo:file { getattr open read };
+
+# /dev/mali0
+allow system_app gpu_device:chr_file { ioctl read write };

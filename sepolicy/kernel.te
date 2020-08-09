@@ -1,0 +1,2 @@
+allow kernel device:dir write;
+allow kernel efs_file:file open;

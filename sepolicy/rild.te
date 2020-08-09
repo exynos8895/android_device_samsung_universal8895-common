@@ -1,0 +1,6 @@
+allow rild init:file read;
+allow rild proc_net:file write;
+allow rild vendor_data_file:file { getattr read write open };
+
+# /dev/umts_ipc0
+allow rild radio_device:chr_file ioctl;
