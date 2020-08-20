@@ -1,8 +1,7 @@
 allow hal_graphics_composer_default self:netlink_kobject_uevent_socket { create read };
 allow hal_graphics_composer_default servicemanager:binder call;
-allow hal_graphics_composer_default sysfs:file read;
-allow hal_graphics_composer_default vendor_data_file:file append;
+allow hal_graphics_composer_default vendor_data_file:file { append getattr open };
 allow hal_graphics_composer_default vndbinder_device:chr_file read;
 
 # /dev/fimg2d
-allow hal_graphics_composer_default video_device:chr_file ioctl;
+allow hal_graphics_composer_default video_device:chr_file { open read write ioctl };

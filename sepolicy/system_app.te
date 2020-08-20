@@ -1,4 +1,8 @@
-allow system_app proc_pagetypeinfo:file { getattr open read };
-
 # /dev/mali0
 allow system_app gpu_device:chr_file { ioctl read write };
+
+allow system_app proc_pagetypeinfo:file { getattr open read };
+allow system_app debugfs_ion:dir search;
+allow system_app debugfs_mali:dir search;
+allow system_app debugfs_mali_mem:dir search;
+allow system_app sysfs_virtual:dir search;

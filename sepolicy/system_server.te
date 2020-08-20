@@ -1,11 +1,14 @@
-# /sys/kernel/debug/mali/mem
-# allow system_server debugfs:dir { open read };
-# allow system_server debugfs:file { open read };
-
 # /dev/mali0
 allow system_server gpu_device:chr_file { ioctl read write };
 
 # memtrack HAL
-allow system_server debugfs:dir r_dir_perms;
+# allow system_server debugfs:dir r_dir_perms;
 allow system_server debugfs_mali:dir r_dir_perms;
 allow system_server debugfs_mali:file r_file_perms;
+
+allow system_server debugfs_ion:dir search;
+allow system_server debugfs_ion:file { getattr open read };
+
+allow system_server debugfs_ion_dma:dir search;
+allow system_server debugfs_mali_mem:dir search;
+allow system_server debugfs_mali_mem:file { getattr open read };

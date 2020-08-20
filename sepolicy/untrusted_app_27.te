@@ -1,2 +1,10 @@
 # /dev/mali0
 allow untrusted_app_27 gpu_device:chr_file { ioctl read write };
+
+allow untrusted_app_27 debugfs_ion:dir search;
+allow untrusted_app_27 debugfs_mali:dir search;
+allow untrusted_app_27 debugfs_mali_mem:dir search;
+
+allow untrusted_app_27 sysfs_net:dir search;
+allow untrusted_app_27 sysfs_virtual:file { open read getattr };
+allow untrusted_app_27 sysfs_virtual:dir search;

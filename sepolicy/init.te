@@ -1,4 +1,3 @@
-allow init device:chr_file ioctl;
 allow init rild:unix_stream_socket connectto;
 allow init self:netlink_kobject_uevent_socket { create setopt };
 allow init socket_device:sock_file create;
@@ -9,7 +8,20 @@ allow init dnsproxyd_socket:sock_file write;
 allow init fwk_sensor_hwservice:hwservice_manager find;
 allow init hwservicemanager:binder call;
 allow init netd:unix_stream_socket connectto;
-allow init self:tcp_socket create;
+allow init fwmarkd_socket:sock_file write;
+allow init nfc:binder call;
+allow init nfc_device:chr_file ioctl;
+allow init sysfs_virtual:file { open write };
+allow init system_server:binder { transfer call };
+allow init tee_device:chr_file ioctl;
+allow init device:chr_file ioctl;
+allow init self:tcp_socket { getopt create bind connect };
+allow init node:tcp_socket node_bind;
+allow init port:tcp_socket { name_bind name_connect };
+allow init gps_vendor_data_file:fifo_file write;
+allow init gps_vendor_data_file:file lock;
 
 # LED
 allow init sysfs_graphics:file { open read write };
+
+unix_socket_connect(init, property, rild)

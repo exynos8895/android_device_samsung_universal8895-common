@@ -1,2 +1,5 @@
 # /dev/mali0
 allow platform_app gpu_device:chr_file { ioctl read write };
+
+allow platform_app debugfs_ion:dir search;
+allow platform_app debugfs_mali:dir search;

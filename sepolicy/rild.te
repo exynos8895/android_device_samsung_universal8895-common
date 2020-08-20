@@ -1,6 +1,15 @@
-allow rild init:file read;
 allow rild proc_net:file write;
-allow rild vendor_data_file:file { getattr read write open };
+allow rild vendor_data_file:file { getattr setattr read write open };
 
 # /dev/umts_ipc0
 allow rild radio_device:chr_file ioctl;
+
+allow rild bin_nv_data_efs_file:file { setattr getattr read open write };
+
+allow rild hal_audio_default:dir search;
+allow rild hal_audio_default:file { getattr open read };
+
+allow rild radio_vendor_data_file:file { create ioctl lock getattr read write open unlink };
+allow rild radio_vendor_data_file:dir { add_name write open read remove_name };
+
+allow rild proc_qtaguid_stat:file read;
