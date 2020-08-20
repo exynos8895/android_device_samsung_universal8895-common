@@ -1,0 +1,20 @@
+# allow hal_fingerprint_default to communicate with various devices
+binder_call(system_app, hal_fingerprint_default)
+
+# kernel fp device
+allow hal_fingerprint_default fingerprint_device:chr_file { open read write ioctl getattr };
+
+# secure memory device
+allow hal_fingerprint_default secmem_device:chr_file { open read write ioctl };
+
+# trust zone device
+allow hal_fingerprint_default tee_device:chr_file { open read write ioctl };
+allow hal_fingerprint_default tee:unix_stream_socket connectto;
+
+# /data/vendor/biometrics/*
+allow hal_fingerprint_default fingerprintd_vendor_data_file:dir { rmdir read write remove_name create open add_name search };
+allow hal_fingerprint_default fingerprintd_vendor_data_file:file { write create read rename open getattr unlink };
+
+# sysfs_virtual
+allow hal_fingerprint_default sysfs_virtual:dir search;
+allow hal_fingerprint_default sysfs_virtual:file { open read };
