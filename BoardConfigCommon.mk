@@ -140,6 +140,12 @@ WIFI_HIDL_FEATURE_DISABLE_AP_MAC_RANDOMIZATION := true
 # MACLOADER
 BOARD_HAVE_SAMSUNG_WIFI          := true
 
+# SEPOLICY
+include device/lineage/sepolicy/exynos/sepolicy.mk
+
+# HAL sepolicy
+include device/samsung_slsi/sepolicy/sepolicy.mk
+
 BOARD_SEPOLICY_DIRS += device/samsung/universal8895-common/sepolicy
 BOARD_SEPOLICY_VERS := $(PLATFORM_SDK_VERSION).0
 

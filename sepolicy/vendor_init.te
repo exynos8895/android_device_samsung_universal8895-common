@@ -1,0 +1,1 @@
+allow vendor_init mobicore_data_file:dir setattr;

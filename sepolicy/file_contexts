@@ -20,10 +20,6 @@
 /dev/mtp_usb*               u:object_r:mtp_device:s0
 /dev/usb(/.*)?              u:object_r:usb_device:s0
 
-# sensors
-/dev/batch_io               u:object_r:sensor_device:s0
-/dev/ssp_sensorhub          u:object_r:sensor_device:s0
-
 # adbroot and storaged
 /dev/stune(/.*)?            u:object_r:cgroup:s0
 
@@ -40,15 +36,9 @@
 /efs/FactoryApp/test_nv        u:object_r:radio_factoryapp_efs_file:s0
 /efs/FactoryApp/gyro_cal_data  u:object_r:sensor_factoryapp_efs_file:s0
 
-/efs/Battery(/.*)?             u:object_r:battery_efs_file:s0
-/efs/bluetooth(/.*)?           u:object_r:bluetooth_efs_file:s0
-/efs/imei(/.*)?                u:object_r:imei_efs_file:s0
 /efs/nv_data.bin(.*)           u:object_r:bin_nv_data_efs_file:s0
 /efs/nv.log                    u:object_r:bin_nv_data_efs_file:s0
 /efs/\.nv_core\.bak(.*)        u:object_r:bin_nv_data_efs_file:s0
-/efs/prov(/.*)?                u:object_r:prov_efs_file:s0
-/efs/prov_data(/.*)?           u:object_r:prov_efs_file:s0
-/efs/wifi(/.*)?                u:object_r:wifi_efs_file:s0
 /efs/wv\.keys                  u:object_r:cpk_efs_file:s0
 /efs/factory\.prop             u:object_r:factoryprop_efs_file:s0
 /efs/TEE(/.*)?                 u:object_r:gatekeeper_efs_file:s0
@@ -58,10 +48,6 @@
 /data/nfc(/.*)?                    u:object_r:nfc_data_file:s0
 
 /data/misc/radio(/.*)?             u:object_r:radio_data_file:s0
-/data/vendor/secradio(/.*)?        u:object_r:radio_vendor_data_file:s0
-
-# gps
-/data/vendor/gps(/.*)?             u:object_r:gps_vendor_data_file:s0
 
 # livedisplay
 /data/vendor/display(/.*)?         u:object_r:display_vendor_data_file:s0
@@ -71,9 +57,6 @@
 
 # mobicore
 /data/misc/mcRegistry(/.*)?        u:object_r:mobicore_data_file:s0
-
-# biometrics
-/data/vendor/biometrics(/.*)?      u:object_r:fingerprintd_vendor_data_file:s0
 
 # camera
 /data/camera(/.*)?                 u:object_r:camera_data_file:s0
@@ -147,13 +130,10 @@
 # modem
 /sys/module/modem_ctrl_ss310ap/parameters/ds_detect                                             u:object_r:sysfs_modem:s0
 
-####################################
 # Lineage hals
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.samsung u:object_r:hal_fingerprint_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.samsung                   u:object_r:hal_light_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.0-service\.exynos                    u:object_r:hal_power_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.0-service\.universal8895         u:object_r:hal_lineage_livedisplay_sysfs_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@[0-9]\.[0-9]-service\.universal8895         u:object_r:hal_lineage_livedisplay_sysfs_exec:s0
+
 
 # hidl services
-/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.2-service\.clearkey                    u:object_r:hal_drm_clearkey_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.widevine                    u:object_r:hal_drm_widevine_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@[0-9]\.[0-9]-service\.clearkey                    u:object_r:hal_drm_clearkey_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@[0-9]\.[0-9]-service\.widevine                    u:object_r:hal_drm_widevine_exec:s0
