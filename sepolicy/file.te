@@ -1,21 +1,12 @@
 ### efs types
-type app_efs_file, file_type;
-type battery_efs_file, file_type;
-type cpk_efs_file, file_type;
 type gatekeeper_efs_file, file_type;
 type radio_factoryapp_efs_file, file_type;
-type imei_efs_file, file_type;
-type bin_nv_data_efs_file, file_type;
-type prov_efs_file, file_type;
-type sec_efs_file, file_type;
-type wifi_efs_file, file_type;
 type factoryprop_efs_file, file_type;
 type sensor_factoryapp_efs_file, file_type;
 type factorymode_factoryapp_efs_file, file_type;
 type baro_delta_factoryapp_efs_file, file_type;
 
 # gps
-type gps_vendor_data_file, file_type, data_file_type;
 type gps_socket, file_type;
 
 # debugfs types
@@ -33,7 +24,6 @@ type proc_swapiness, fs_type, proc_type;
 type display_vendor_data_file, file_type, data_file_type;
 type fingerprintd_vendor_data_file, data_file_type, file_type;
 type mediadrm_data_file, file_type, data_file_type;
-type radio_vendor_data_file, data_file_type, file_type;
 type mobicore_data_file, data_file_type, core_data_file_type, file_type;
 
 # sysfs types
@@ -43,9 +33,7 @@ type sysfs_multipdp, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_sec, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_gps, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_brightness, fs_type, sysfs_type, mlstrustedobject;
-type sysfs_input, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_virtual, fs_type, sysfs_type, mlstrustedobject;
-type sysfs_iio, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_charger, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_modem, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_lcd, fs_type, sysfs_type, mlstrustedobject;

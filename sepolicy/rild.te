@@ -11,5 +11,10 @@ allow rild hal_audio_default:file { getattr open read };
 
 allow rild radio_vendor_data_file:file { create ioctl lock getattr read write open unlink };
 allow rild radio_vendor_data_file:dir { add_name write open read remove_name };
+allow rild radio_data_file:file { open read };
 
 allow rild proc_qtaguid_stat:file read;
+
+allow rild factoryprop_efs_file:file { open read write };
+
+allow rild init:file getattr;
