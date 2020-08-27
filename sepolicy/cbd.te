@@ -1,0 +1,2 @@
+allow cbd factoryprop_efs_file:file { open read };
+allow cbd sysfs_info:file { open read };

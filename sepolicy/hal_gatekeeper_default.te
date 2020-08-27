@@ -1,3 +1,4 @@
 allow hal_gatekeeper_default gatekeeper_efs_file:file { write open read };
 allow hal_gatekeeper_default gatekeeper_efs_file:dir search;
 allow hal_gatekeeper_default tee_device:chr_file { open read write };
+allow hal_gatekeeper_default efs_file:dir search;

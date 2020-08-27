@@ -4,3 +4,5 @@ allow priv_app gpu_device:chr_file { ioctl read write };
 allow priv_app debugfs_ion:dir search;
 allow priv_app debugfs_mali:dir search;
 allow priv_app debugfs_mali_mem:dir search;
+
+allow priv_app sysfs_zram:file { getattr open read };

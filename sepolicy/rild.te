@@ -6,15 +6,24 @@ allow rild radio_device:chr_file ioctl;
 
 allow rild bin_nv_data_efs_file:file { setattr getattr read open write };
 
-allow rild hal_audio_default:dir search;
-allow rild hal_audio_default:file { getattr open read };
-
 allow rild radio_vendor_data_file:file { create ioctl lock getattr read write open unlink };
 allow rild radio_vendor_data_file:dir { add_name write open read remove_name };
-allow rild radio_data_file:file { open read };
+allow rild radio_data_file:file { open read getattr write };
 
 allow rild proc_qtaguid_stat:file read;
 
 allow rild factoryprop_efs_file:file { open read write };
 
 allow rild init:file getattr;
+
+# binder
+allow rild hal_radio_default:binder call;
+
+# audio
+allow rild hal_audio_default:dir search;
+allow rild hal_audio_default:file r_file_perms;
+
+# hwservice
+allow rild hal_sec_radio_hwservice:hwservice_manager add;
+allow rild hal_sec_radio_bridge_hwservice:hwservice_manager add;
+allow rild hal_sec_radio_channel_hwservice:hwservice_manager add;
