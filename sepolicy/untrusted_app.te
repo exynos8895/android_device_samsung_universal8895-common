@@ -1,7 +1,2 @@
 # /dev/mali0
 allow untrusted_app gpu_device:chr_file { ioctl open read write };
-
-allow untrusted_app debugfs_ion:dir search;
-allow untrusted_app debugfs_ion_dma:dir search;
-allow untrusted_app debugfs_mali:dir search;
-allow untrusted_app debugfs_mali_mem:dir search;

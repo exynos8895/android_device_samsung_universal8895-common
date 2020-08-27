@@ -1,5 +1,4 @@
-allow mediacodec debugfs_ion:dir search;
-
 # /sys/class/video4linux/video6/name
-allow mediacodec sysfs:file r_file_perms;
-allow mediacodec sysfs:dir { open read };
+allow mediacodec sysfs_v4l:dir { search open read };
+allow mediacodec sysfs_v4l_mfc:dir search;
+allow mediacodec sysfs_v4l_mfc:file { getattr open read };

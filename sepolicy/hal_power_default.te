@@ -1,1 +1,8 @@
-allow hal_power_default sysfs_graphics:file read;
+allow hal_power_default sysfs_graphics:file { getattr open read };
+allow hal_power_default sysfs_input:file { getattr open read };
+allow hal_power_default sysfs_virtual:dir { open read search };
+allow hal_power_default sysfs_virtual:file { getattr open read };
+allow hal_power_default sysfs_spi_writeable:dir { open read search };
+allow hal_power_default sysfs_spi_writeable:file rw_file_perms;
+allow hal_power_default sysfs_touchscreen_writable:dir { open read search };
+# allow hal_power_default sysfs_touchscreen_writeable:file rw_file_perms;
