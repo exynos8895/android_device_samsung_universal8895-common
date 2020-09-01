@@ -9,6 +9,7 @@ allow rild bin_nv_data_efs_file:file { setattr getattr read open write };
 allow rild radio_vendor_data_file:file { create ioctl lock getattr read write open unlink };
 allow rild radio_vendor_data_file:dir { add_name write open read remove_name };
 allow rild radio_data_file:file { open read getattr write };
+allow rild radio_data_file:dir search;
 
 allow rild proc_qtaguid_stat:file read;
 

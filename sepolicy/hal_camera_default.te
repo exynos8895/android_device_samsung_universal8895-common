@@ -8,6 +8,7 @@ allow hal_camera_default sysfs_virtual:file { getattr open read write };
 allow hal_camera_default sysfs_camera:dir search;
 allow hal_camera_default sysfs_camera:file { getattr open read write };
 allow hal_camera_default exported_camera_prop:file { getattr open read };
+allow hal_camera_default camera_data_file:dir search;
 
 # add_hwservice(hal_camera_default, hal_vendor_multiframeprocessing_hwservice)
 # add_hwservice(hal_camera_default, hal_vendor_iva_hwservice)
