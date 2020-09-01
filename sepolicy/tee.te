@@ -1,6 +1,6 @@
-allow tee efs_file:dir getattr;
+allow tee efs_file:dir { search getattr };
 allow tee efs_file:file { getattr open read };
-allow tee gatekeeper_efs_file:dir { open read };
+allow tee gatekeeper_efs_file:dir { search open read };
 allow tee gatekeeper_efs_file:file { getattr open read };
 allow tee init:unix_stream_socket connectto;
 allow tee property_socket:sock_file write;
@@ -11,5 +11,5 @@ allow tee tee_prop:property_service set;
 # /dev/t-base-tui
 allow tee tee_device:chr_file { ioctl open read };
 
-allow tee mobicore_vendor_data_file:dir { open read };
-allow tee mobicore_vendor_data_file:file { getattr open read };
+allow tee mobicore_vendor_data_file:dir { search open read };
+allow tee mobicore_vendor_data_file:file rw_file_perms;
