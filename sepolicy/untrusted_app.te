@@ -1,4 +1,0 @@
-# /dev/mali0
-allow untrusted_app gpu_device:chr_file { ioctl open read write };
-
-allow untrusted_app debugfs_mali:dir read;
