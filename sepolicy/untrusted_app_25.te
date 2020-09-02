@@ -1,2 +1,0 @@
-# /dev/mali0
-allow untrusted_app_25 gpu_device:chr_file ioctl;
