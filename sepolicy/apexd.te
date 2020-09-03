@@ -1,1 +1,1 @@
-allow apexd sysfs_virtual:file { read write open };
+allow apexd sysfs_virtual:file rw_file_perms;
