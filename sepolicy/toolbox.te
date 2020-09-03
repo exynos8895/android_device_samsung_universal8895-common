@@ -1,1 +1,1 @@
-allow toolbox ram_device:blk_file { open read write };
+allow toolbox ram_device:blk_file rw_file_perms;
