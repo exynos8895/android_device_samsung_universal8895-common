@@ -9,9 +9,6 @@ ro.cbd.dt_revision          u:object_r:modemloader_prop:s0
 ril.cbd.dt_revision         u:object_r:modemloader_prop:s0
 ro.modemloader.done         u:object_r:modemloader_prop:s0
 
-# mobicore
-sys.mobicoredaemon.enable   u:object_r:tee_prop:s0
-
 persist.rmnet.              u:object_r:persist_rmnet_prop:s0
 persist.data.df.            u:object_r:persist_data_df_prop:s0
 persist.data.wda.           u:object_r:persist_data_wda_prop:s0

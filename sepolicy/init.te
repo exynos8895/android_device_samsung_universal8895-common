@@ -34,7 +34,6 @@ allow init sysfs_graphics:file create_file_perms;
 allow init sysfs_touchscreen_writable:file setattr;
 
 allow init system_server:binder { transfer call };
-allow init tee_device:chr_file rw_file_perms;
 allow init device:chr_file ioctl;
 allow init self:tcp_socket create_socket_perms;
 allow init node:tcp_socket node_bind;
