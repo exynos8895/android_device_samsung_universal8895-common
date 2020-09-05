@@ -23,9 +23,7 @@ type proc_swapiness, fs_type, proc_type;
 # data types
 type display_vendor_data_file, file_type, data_file_type;
 type fingerprintd_vendor_data_file, data_file_type, file_type;
-type mobicore_vendor_data_file, data_file_type, file_type;
 type mediadrm_data_file, file_type, data_file_type;
-type mobicore_data_file, data_file_type, core_data_file_type, file_type;
 
 # sysfs types
 type sysfs_batteryinfo_charger_writable, sysfs_type, rw_fs_type, fs_type;
