@@ -16,6 +16,9 @@
 
 LOCAL_PATH := device/samsung/universal8895-common
 
+# Shipping API
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n.mk)
+
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Audio
