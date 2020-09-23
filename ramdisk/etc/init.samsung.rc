@@ -209,13 +209,13 @@ on post-fs-data
     chmod 0666 /data/misc/conn/.wificable.info
     
 # [ SEC_PRODUCT_FEATURE_SECURITY_SUPPORT_FIVE
-    mkdir /data/misc/integrity 0775 vendor_audit system
+    mkdir /data/misc/integrity 0775 system system
 # ] SEC_PRODUCT_FEATURE_SECURITY_SUPPORT_FIVE
 	
 # [ SEC_SELINUX_PORTING_COMMON
     mkdir /data/misc/audit 0775 system system
-    chown vendor_audit vendor_audit /data/misc/audit/audit.log
-    chown vendor_audit vendor_audit /data/misc/audit/audit.old
+    chown system system /data/misc/audit/audit.log
+    chown system system /data/misc/audit/audit.old
 
     # arcounter
     mkdir /data/misc/arcounter 0700 system system
