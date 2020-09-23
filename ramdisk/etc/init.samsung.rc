@@ -285,11 +285,11 @@ on post-fs-data
     mkdir /data/app_fonts 0775 system system
 
 # [ SEC_SELINUX_PORTING_COMMON
-    restorecon --recursive --force /efs
-    restorecon --recursive --force /cpefs
-    restorecon --recursive --force /mnt/vendor/efs
-    restorecon --recursive --force /mnt/vendor/cpefs
-    restorecon --recursive --force /sec_efs
+    exec u:r:vendor_init:s0 root root -- /vendor/bin/toybox_vendor restorecon -RF /efs
+    exec u:r:vendor_init:s0 root root -- /vendor/bin/toybox_vendor restorecon -RF /cpefs
+    exec u:r:vendor_init:s0 root root -- /vendor/bin/toybox_vendor restorecon -RF /mnt/vendor/efs
+    exec u:r:vendor_init:s0 root root -- /vendor/bin/toybox_vendor restorecon -RF /mnt/vendor/cpefs
+    exec u:r:vendor_init:s0 root root -- /vendor/bin/toybox_vendor restorecon -RF /sec_efs
     restorecon_recursive /carrier
     restorecon /sys/kernel/debug/tracing/trace_marker
 # ] SEC_SELINUX_PORTING_COMMON
