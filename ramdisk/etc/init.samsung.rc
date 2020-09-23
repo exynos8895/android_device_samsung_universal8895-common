@@ -236,7 +236,7 @@ on post-fs-data
     # mkdir /efs/pfw_data 0760 spay spay
 
     # Linux On Dex
-    mkdir /data/lxd 0770 root vendor_lod
+    mkdir /data/lxd 0770 root 
 
     # MST/NFC Switch
     # chown spay system /dev/mst_ctrl
