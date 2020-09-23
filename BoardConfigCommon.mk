@@ -100,9 +100,6 @@ TARGET_EXCLUDES_AUDIOFX := true
 # Vendor separation
 TARGET_COPY_OUT_VENDOR := system/vendor
 
-# Properties
-TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
-
 # Device Tree
 BOARD_USES_DT := true
 
