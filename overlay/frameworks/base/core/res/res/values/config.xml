@@ -265,6 +265,8 @@ Add a comment to this line
          turned off and the screen off animation has been performed. -->
     <bool name="config_dozeAfterScreenOffByDefault">true</bool>
 
+    <!-- True if the firmware supports connected MAC randomization -->
+    <bool name="config_wifi_ap_randomization_supported">false</bool>
     
 <!-- Values for GPS configuration -->
     <string-array translatable="false" name="config_gpsParameters">
