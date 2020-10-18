@@ -1,5 +1,4 @@
 ### efs types
-type gatekeeper_efs_file, file_type;
 type radio_factoryapp_efs_file, file_type;
 type factoryprop_efs_file, file_type;
 type sensor_factoryapp_efs_file, file_type;
