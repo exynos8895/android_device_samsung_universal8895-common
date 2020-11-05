@@ -71,95 +71,95 @@ sed -i -z "s/    setprop wifi.interface wlan0\n\n/    setprop wifi.interface wla
 sed -i "s/SSLv3_client_method/SSLv23_method\x00\x00\x00\x00\x00\x00/" $BLOB_ROOT/vendor/bin/hw/gpsd
 
 # Remove libhidltransport dependencie
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/lib/android.hardware.bluetooth.a2dp@1.0.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/lib/android.hardware.gnss@1.0.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/lib/android.hardware.gnss@1.1.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/lib/libGrallocWrapper.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/lib/libskeymaster.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/lib/vendor.samsung.hardware.gnss@1.0.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/lib/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/lib64/android.hardware.bluetooth.a2dp@1.0.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/lib64/android.hardware.bluetooth@1.0.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/lib64/android.hardware.gnss@1.0.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/lib64/android.hardware.gnss@1.1.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/lib64/android.hardware.nfc@1.0.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/lib64/android.hardware.nfc@1.1.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/lib64/libGrallocWrapper.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/lib64/libskeymaster.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/lib64/vendor.samsung.hardware.bluetooth@1.0.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/lib64/vendor.samsung.hardware.gnss@1.0.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/lib64/vendor.samsung.hardware.nfc@1.1.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/lib64/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/bin/hw/android.hardware.bluetooth@1.0-service
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/bin/hw/android.hardware.drm@1.1-service.widevine
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/bin/hw/sec.android.hardware.nfc@1.1-service
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/bin/hw/vendor.samsung.hardware.gnss@1.0-service
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/bin/hw/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/libril.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/libsec-ril-dsds.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/libsec-ril.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/libskeymaster3device.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/libstagefright_bufferqueue_helper_vendor.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/libstagefright_omx_vendor.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/libwvhidl.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/sensors.sensorhub.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/vendor.samsung.hardware.radio.channel@2.0.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/vendor.samsung.hardware.radio@2.0.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/hw/android.hardware.bluetooth@1.0-impl.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/hw/android.hardware.gnss@1.1-impl.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/libril.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/libsec-ril-dsds.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/libsec-ril.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/libskeymaster3device.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/nfc_nci_sec.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/sensors.sensorhub.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/vendor.samsung.hardware.radio@2.0.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/lib/android.hardware.bluetooth.a2dp@1.0.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/lib/android.hardware.gnss@1.0.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/lib/android.hardware.gnss@1.1.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/lib/libGrallocWrapper.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/lib/libskeymaster.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/lib/vendor.samsung.hardware.gnss@1.0.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/lib/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/lib64/android.hardware.bluetooth.a2dp@1.0.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/lib64/android.hardware.bluetooth@1.0.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/lib64/android.hardware.gnss@1.0.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/lib64/android.hardware.gnss@1.1.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/lib64/android.hardware.nfc@1.0.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/lib64/android.hardware.nfc@1.1.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/lib64/libGrallocWrapper.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/lib64/libskeymaster.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/lib64/vendor.samsung.hardware.bluetooth@1.0.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/lib64/vendor.samsung.hardware.gnss@1.0.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/lib64/vendor.samsung.hardware.nfc@1.1.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/lib64/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/bin/hw/android.hardware.bluetooth@1.0-service
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/bin/hw/android.hardware.drm@1.1-service.widevine
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/bin/hw/sec.android.hardware.nfc@1.1-service
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/bin/hw/vendor.samsung.hardware.gnss@1.0-service
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/bin/hw/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/libril.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/libsec-ril-dsds.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/libsec-ril.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/libskeymaster3device.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/libstagefright_bufferqueue_helper_vendor.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/libstagefright_omx_vendor.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/libwvhidl.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/sensors.sensorhub.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/vendor.samsung.hardware.radio.channel@2.0.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/vendor.samsung.hardware.radio@2.0.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/hw/android.hardware.bluetooth@1.0-impl.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/hw/android.hardware.gnss@1.1-impl.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/libril.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/libsec-ril-dsds.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/libsec-ril.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/libskeymaster3device.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/nfc_nci_sec.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/sensors.sensorhub.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
+"${PATCHELF}" --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/vendor.samsung.hardware.radio@2.0.so
 # Remove libhwbinder dependencie
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/lib/android.hardware.bluetooth.a2dp@1.0.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/lib/android.hardware.gnss@1.0.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/lib/android.hardware.gnss@1.1.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/lib/vendor.samsung.hardware.gnss@1.0.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/lib/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/lib64/android.hardware.bluetooth.a2dp@1.0.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/lib64/android.hardware.bluetooth@1.0.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/lib64/android.hardware.gnss@1.0.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/lib64/android.hardware.gnss@1.1.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/lib64/android.hardware.nfc@1.0.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/lib64/android.hardware.nfc@1.1.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/lib64/vendor.samsung.hardware.bluetooth@1.0.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/lib64/vendor.samsung.hardware.gnss@1.0.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/lib64/vendor.samsung.hardware.nfc@1.1.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/lib64/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/bin/hw/android.hardware.drm@1.1-service.widevine
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/bin/hw/sec.android.hardware.nfc@1.1-service
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib/libril.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib/libsec-ril-dsds.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib/libsec-ril.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib/libwvhidl.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib/vendor.samsung.hardware.radio.channel@2.0.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib/vendor.samsung.hardware.radio@2.0.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib64/libril.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib64/libsec-ril-dsds.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib64/libsec-ril.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib64/vendor.samsung.hardware.radio@2.0.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/lib/android.hardware.bluetooth.a2dp@1.0.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/lib/android.hardware.gnss@1.0.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/lib/android.hardware.gnss@1.1.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/lib/vendor.samsung.hardware.gnss@1.0.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/lib/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/lib64/android.hardware.bluetooth.a2dp@1.0.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/lib64/android.hardware.bluetooth@1.0.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/lib64/android.hardware.gnss@1.0.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/lib64/android.hardware.gnss@1.1.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/lib64/android.hardware.nfc@1.0.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/lib64/android.hardware.nfc@1.1.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/lib64/vendor.samsung.hardware.bluetooth@1.0.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/lib64/vendor.samsung.hardware.gnss@1.0.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/lib64/vendor.samsung.hardware.nfc@1.1.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/lib64/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/vendor/bin/hw/android.hardware.drm@1.1-service.widevine
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/vendor/bin/hw/sec.android.hardware.nfc@1.1-service
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib/libril.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib/libsec-ril-dsds.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib/libsec-ril.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib/libwvhidl.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib/vendor.samsung.hardware.radio.channel@2.0.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib/vendor.samsung.hardware.radio@2.0.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib64/libril.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib64/libsec-ril-dsds.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib64/libsec-ril.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
+"${PATCHELF}" --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib64/vendor.samsung.hardware.radio@2.0.so
 
 # Protobuf
-patchelf --replace-needed libprotobuf-cpp-lite.so libprotobuf-cpp-lite-v29.so $BLOB_ROOT/vendor/lib/libwvhidl.so
-patchelf --replace-needed libprotobuf-cpp-lite.so libprotobuf-cpp-lite-v29.so $BLOB_ROOT/vendor/lib/mediadrm/libwvdrmengine.so
-patchelf --replace-needed libprotobuf-cpp-full.so libprotobuf-cpp-full-v29.so $BLOB_ROOT/vendor/lib/libsec-ril-dsds.so
-patchelf --replace-needed libprotobuf-cpp-full.so libprotobuf-cpp-full-v29.so $BLOB_ROOT/vendor/lib/libsec-ril.so
-patchelf --replace-needed libprotobuf-cpp-full.so libprotobuf-cpp-full-v29.so $BLOB_ROOT/vendor/lib64/libsec-ril-dsds.so
-patchelf --replace-needed libprotobuf-cpp-full.so libprotobuf-cpp-full-v29.so $BLOB_ROOT/vendor/lib64/libsec-ril.so
+"${PATCHELF}" --replace-needed libprotobuf-cpp-lite.so libprotobuf-cpp-lite-v29.so $BLOB_ROOT/vendor/lib/libwvhidl.so
+"${PATCHELF}" --replace-needed libprotobuf-cpp-lite.so libprotobuf-cpp-lite-v29.so $BLOB_ROOT/vendor/lib/mediadrm/libwvdrmengine.so
+"${PATCHELF}" --replace-needed libprotobuf-cpp-full.so libprotobuf-cpp-full-v29.so $BLOB_ROOT/vendor/lib/libsec-ril-dsds.so
+"${PATCHELF}" --replace-needed libprotobuf-cpp-full.so libprotobuf-cpp-full-v29.so $BLOB_ROOT/vendor/lib/libsec-ril.so
+"${PATCHELF}" --replace-needed libprotobuf-cpp-full.so libprotobuf-cpp-full-v29.so $BLOB_ROOT/vendor/lib64/libsec-ril-dsds.so
+"${PATCHELF}" --replace-needed libprotobuf-cpp-full.so libprotobuf-cpp-full-v29.so $BLOB_ROOT/vendor/lib64/libsec-ril.so
 
 # charger
-patchelf --add-needed libmemset.so $BLOB_ROOT/lib64/libpixelflinger.so
+"${PATCHELF}" --add-needed libmemset.so $BLOB_ROOT/lib64/libpixelflinger.so
 
 "${MY_DIR}/setup-makefiles.sh"
