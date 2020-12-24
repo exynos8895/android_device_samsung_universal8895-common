@@ -100,13 +100,6 @@ patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/bin/hw/android.ha
 patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/bin/hw/sec.android.hardware.nfc@1.1-service
 patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/bin/hw/vendor.samsung.hardware.gnss@1.0-service
 patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/bin/hw/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/camera.device@1.0-impl.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/camera.device@3.2-impl.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/camera.device@3.3-impl.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/camera.device@3.4-external-impl.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/camera.device@3.4-impl.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/camera.device@3.5-external-impl.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/camera.device@3.5-impl.so
 patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/libril.so
 patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/libsec-ril-dsds.so
 patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/libsec-ril.so
@@ -118,13 +111,6 @@ patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/sensors.senso
 patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
 patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/vendor.samsung.hardware.radio.channel@2.0.so
 patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib/vendor.samsung.hardware.radio@2.0.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/camera.device@1.0-impl.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/camera.device@3.2-impl.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/camera.device@3.3-impl.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/camera.device@3.4-external-impl.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/camera.device@3.4-impl.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/camera.device@3.5-external-impl.so
-patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/camera.device@3.5-impl.so
 patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/hw/android.hardware.bluetooth@1.0-impl.so
 patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/hw/android.hardware.gnss@1.1-impl.so
 patchelf --remove-needed libhidltransport.so $BLOB_ROOT/vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so
@@ -155,7 +141,6 @@ patchelf --remove-needed libhwbinder.so $BLOB_ROOT/lib64/vendor.samsung.hardware
 patchelf --remove-needed libhwbinder.so $BLOB_ROOT/lib64/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
 patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/bin/hw/android.hardware.drm@1.1-service.widevine
 patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/bin/hw/sec.android.hardware.nfc@1.1-service
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib/camera.device@1.0-impl.so
 patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib/libril.so
 patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib/libsec-ril-dsds.so
 patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib/libsec-ril.so
@@ -163,7 +148,6 @@ patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib/libwvhidl.so
 patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
 patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib/vendor.samsung.hardware.radio.channel@2.0.so
 patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib/vendor.samsung.hardware.radio@2.0.so
-patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib64/camera.device@1.0-impl.so
 patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so
 patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib64/libril.so
 patchelf --remove-needed libhwbinder.so $BLOB_ROOT/vendor/lib64/libsec-ril-dsds.so
