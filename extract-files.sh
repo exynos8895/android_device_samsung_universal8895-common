@@ -164,4 +164,7 @@ patchelf --replace-needed libprotobuf-cpp-full.so libprotobuf-cpp-full-v29.so $B
 patchelf --replace-needed libprotobuf-cpp-full.so libprotobuf-cpp-full-v29.so $BLOB_ROOT/vendor/lib64/libsec-ril-dsds.so
 patchelf --replace-needed libprotobuf-cpp-full.so libprotobuf-cpp-full-v29.so $BLOB_ROOT/vendor/lib64/libsec-ril.so
 
+# charger
+patchelf --add-needed libmemset.so $BLOB_ROOT/lib64/libpixelflinger.so
+
 "${MY_DIR}/setup-makefiles.sh"

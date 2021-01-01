@@ -187,6 +187,7 @@ vendor/lib64/libskeymaster3device.so
 # LPM
 bin/lpm
 lib64/libmaet.so
+lib64/libpixelflinger.so
 lib64/libsxqk_skia.so
 media/battery_error.spi
 media/battery_low.spi
