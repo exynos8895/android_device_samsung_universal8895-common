@@ -88,3 +88,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Configstore
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+
+# HWC
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.disable_hwc=1
