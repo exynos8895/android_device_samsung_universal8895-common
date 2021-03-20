@@ -76,7 +76,8 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.3 \
     android.hardware.camera.device@3.4 \
     android.hardware.camera.provider@2.4 \
-    Snap
+    camera.universal8895 \
+    Camera2
 
 # Camera configurations
 PRODUCT_COPY_FILES += \
@@ -228,20 +229,34 @@ PRODUCT_PACKAGES += \
     mobicore.rc \
     ueventd.samsungexynos8895.rc
 
+
+# RCS
+PRODUCT_PACKAGES += \
+    com.android.ims.rcsmanager \
+    PresencePolling \
+    RcsService
+    
 # RenderScript
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio.config@1.0 \
-    android.hardware.radio.config@1.1 \
-    android.hardware.radio.config@1.2 \
     android.hardware.radio@1.2 \
     android.hardware.radio@1.3 \
     android.hardware.radio@1.4 \
-    libxml2
+    android.hardware.radio.config@1.0 \
+    android.hardware.radio.config@1.1 \
+    android.hardware.radio.config@1.2 \
+    init.baseband.rc \
+    libxml2 \
+    libprotobuf-cpp-full
 
+# Copy stock APN config as lineage one seams to be quite broken and outdated
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/ril/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml \
+    $(COMMON_PATH)/configs/ril/spn-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/spn-conf.xml
+    
 # SamsungDoze
 PRODUCT_PACKAGES += \
     SamsungDoze
@@ -262,7 +277,8 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 # Shims
 PRODUCT_PACKAGES += \
-    libexynoscamera_shim
+    libexynoscamera_shim \
+    libexynosdisplay_shim
 
 # stagefright
 PRODUCT_PACKAGES += \
@@ -280,6 +296,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service
 
+# Network
+PRODUCT_PACKAGES += \
+    netutils-wrapper-1.0
+    
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
