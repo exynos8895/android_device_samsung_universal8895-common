@@ -51,8 +51,6 @@ etc/media_codecs_sec_qcp.xml
 etc/media_codecs_sec_secondary.xml
 etc/media_codecs_sec_video_primary.xml
 etc/media_profiles.xml
-etc/mixer_gains.xml
-etc/mixer_paths.xml
 vendor/etc/SoundBoosterParam.txt
 vendor/etc/abox_debug.xml
 vendor/etc/audio_effects.conf
