@@ -264,13 +264,6 @@ Add a comment to this line
     <!-- If true, the doze component is not started until after the screen has been
          turned off and the screen off animation has been performed. -->
     <bool name="config_dozeAfterScreenOffByDefault">true</bool>
-
-    <!-- True if the firmware supports connected MAC randomization -->
-    <bool name="config_wifi_ap_randomization_supported">false</bool>
-    <bool name="config_wifi_connected_mac_randomization_supported">false</bool>
-
-    <!-- True if the firmware supports p2p MAC randomization -->
-    <bool name="config_wifi_p2p_mac_randomization_supported">false</bool>
     
 <!-- Values for GPS configuration -->
     <string-array translatable="false" name="config_gpsParameters">
