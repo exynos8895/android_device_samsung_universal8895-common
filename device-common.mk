@@ -181,7 +181,7 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag \
     com.android.nfc_extras \
-    libclang_rt.ubsan_standalone-aarch64-android
+    android.hardware.nfc@1.2-service.samsung
 
 # Power
 PRODUCT_PACKAGES += \
@@ -328,6 +328,7 @@ PRODUCT_PACKAGES += \
     wifilogd \
     wlutil \
     libwpa_client \
+    TetheringConfigOverlay \
     wpa_supplicant \
     wpa_supplicant.conf \
     android.hardware.wifi@1.0-service \

@@ -233,13 +233,6 @@ vendor/lib64/libMcClient.so
 
 # NFC
 etc/libnfc-nci.conf
-etc/nfc_key
-etc/nfcee_access.xml
-lib64/android.hardware.nfc@1.0.so
-lib64/android.hardware.nfc@1.1.so
-lib64/vendor.samsung.hardware.nfc@1.1.so
-vendor/bin/hw/sec.android.hardware.nfc@1.1-service
-vendor/etc/init/sec.android.hardware.nfc@1.1-service.rc
 vendor/etc/libnfc-sec-vendor.conf
 vendor/etc/nfc/SGP/sec_s3nrn82_rfreg.bin
 vendor/etc/nfc/sec_s3nrn82_rfreg.bin
