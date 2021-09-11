@@ -277,7 +277,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 # Shims
 PRODUCT_PACKAGES += \
     libexynoscamera_shim \
-    libcutils_shim \
     libmemset
 
 # stagefright
