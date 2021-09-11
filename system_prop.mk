@@ -96,5 +96,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Telephony
 PRODUCT_PRODUCT_PROPERTIES += \
+    ro.vendor.sec.radio.def_network=10,10 \
     ro.telephony.default_network=10,10
 

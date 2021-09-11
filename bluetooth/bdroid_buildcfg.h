@@ -22,6 +22,7 @@
 
 #define BTM_WBS_INCLUDED TRUE       /* Enable WBS */
 #define BTIF_HF_WBS_PREFERRED FALSE /* Don't prefer WBS    */
+#define BTM_ESCO_TRANSPORT_UNIT_SIZE_PCM16
 
 #define BLE_VND_INCLUDED TRUE
 

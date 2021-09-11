@@ -215,14 +215,6 @@ Add a comment to this line
     <!-- The device supports freeform window management -->
     <bool name="config_freeformWindowManagement">true</bool>
 
-    <!-- Flag indicating whether strict threshold is used, or lenient threshold is used,
-            when evaluating RSRP for LTE antenna bar display
-           0. Strict threshold
-           1. Lenient threshold
-           2. Custom threshold
-    -->
-    <!--integer name="config_LTE_RSRP_threshold_type">2</integer-->
-
     <!-- Idle Receive current for wifi radio. 0 by default-->
     <integer translatable="false" name="config_wifi_idle_receive_cur_ma">1</integer>
 

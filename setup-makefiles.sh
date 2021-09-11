@@ -63,6 +63,9 @@ SYMLINKS := \$(TARGET_OUT)/vendor
 	@echo "Symlink: libOpenCL.so.1.1"
 	\$(hide) ln -sf egl/libGLES_mali.so \$@/lib/libOpenCL.so.1.1
 	\$(hide) ln -sf egl/libGLES_mali.so \$@/lib64/libOpenCL.so.1.1
+	@echo "Symlink: vulkan.exynos5.so"
+	\$(hide) ln -sf egl/libGLES_mali.so \$@/lib/vulkan.exynos5.so
+	\$(hide) ln -sf egl/libGLES_mali.so \$@/lib64/vulkan.exynos5.so
 
 ALL_MODULES.\$(LOCAL_MODULE).INSTALLED := \\
 	\$(ALL_MODULES.\$(LOCAL_MODULE).INSTALLED) \$(SYMLINKS)

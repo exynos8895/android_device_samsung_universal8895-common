@@ -152,10 +152,6 @@ vendor/lib64/libhwc2onfbadapter.so
 vendor/lib64/libion_exynos.so
 vendor/lib64/libmpp.so
 
-# vulkan
-vendor/lib/hw/vulkan.exynos5.so|17c8c848aa0bd14d384a4bf22050992eb299ea41
-vendor/lib64/hw/vulkan.exynos5.so|424508942221ea28fab376e7730dd5b35dd5f1c4
-
 # Hotword Enrollment
 -priv-app/HotwordEnrollmentOKGoogleExCORTEXM4/HotwordEnrollmentOKGoogleExCORTEXM4.apk;PRESIGNED
 -priv-app/HotwordEnrollmentXGoogleExCORTEXM4/HotwordEnrollmentXGoogleExCORTEXM4.apk;PRESIGNED
@@ -237,7 +233,6 @@ vendor/etc/libnfc-sec-vendor.conf
 vendor/etc/nfc/SGP/sec_s3nrn82_rfreg.bin
 vendor/etc/nfc/sec_s3nrn82_rfreg.bin
 vendor/firmware/nfc/sec_s3nrn82_firmware.bin
-vendor/lib64/nfc_nci_sec.so
 
 # OMX
 lib/libExynosOMX_Core.so
@@ -270,47 +265,46 @@ lib64/omx/libOMX.Exynos.VP9.Encoder.so
 lib64/omx/libOMX.Exynos.WMV.Decoder.so
 
 # RIL
-lib/libsecnativefeature.so
-lib64/libsecnativefeature.so
 vendor/etc/init/init.vendor.rilchip.rc
 vendor/etc/init/init.vendor.rilcommon.rc
 
-# RIL - from starlte - G960FXXU8DTC5
-vendor/lib/libvndsecril-client.so|4f9c59b0a5e40af38402a3f2cb79f12eb023c207
-vendor/lib64/libvndsecril-client.so|d2a5ac7bd37748659aa36dc9880dca4a8ea80353
-
-# RIL - from d2s - N975FXXU6FUCD
-vendor/bin/cbd|c5e4f2779b9c64bc728e23fcd60e104c4692c862
-vendor/bin/hw/rild|c77d17bde3312077a77a3a8238a62e649a996f44
-vendor/lib/libengmode_client.so|404085402ea19b78e2f495089bb6ec6642105918
-vendor/lib/libprotobuf-cpp-full-3.9.1.so|4290c27525874cb687d072dcfe20244e65685f2a
-vendor/lib/libreference-ril.so|46374a18b4a2cff2bbcd7eb4706421ac404dd924
-vendor/lib/libril.so|d60c374b2fae7302d5e2ea469d01ff100bb7dd0a
-vendor/lib/librilutils.so|6af19cf1ab9ec150213d61552870277a6f49096b
-vendor/lib/libsemnativecarrierfeature.so|ac27187c27eba2b96eaa4812b8e9b60193ca18d6
-vendor/lib/libsec-ril-dsds.so|c28062a262a74ee201e0b547c91eb9daea6e17af
-vendor/lib/libsec-ril.so|b482bac2a6294e66b5bca7e67e7303092b7710a7
-vendor/lib/libsec_semRil.so|0e098bc1099a8cb466e29b2918c8968d214fb56c
-vendor/lib/libvkmanager_vendor.so|f185f6a79c8682b35305afd1a28eb4ab86f149f0
-vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so|c130cf05828ee1e415cf5823f2a67e023508f710
-vendor/lib/vendor.samsung.hardware.radio.channel@2.0.so|8f1ef76608e97b5864e30ea2f2aff2f685eb4d8e
-vendor/lib/vendor.samsung.hardware.radio@2.0.so|1c976df4082e7829578a9cb48c040706e1753a6d
-vendor/lib/vendor.samsung.hardware.radio@2.1.so|6ce633e09b82f54aabd789ca23a5f1833a232f68
-vendor/lib64/libengmode_client.so|74bb9b00ec50fd52b6efe8e8008c3a08abbfaf55
-vendor/lib64/libprotobuf-cpp-full-3.9.1.so|b9613d7b25ffd6ab31f7aa32a904aa6f5f4f9cdf
-vendor/lib64/libreference-ril.so|3ed00a3a6d7baaef60d6edc4be9818d8ccea9801
-vendor/lib64/libril.so|cf62752d95d5bd16fe2613ee0b4ab1cb5328b37c
-vendor/lib64/librilutils.so|ad142dbbca112ae7676a58b0f55bf1c1a04e87f7
-vendor/lib64/libsemnativecarrierfeature.so|b9663215a8cae356b4ddf86790359beda9c30f47
-vendor/lib64/libsec-ril-dsds.so|33417ea0f8794351cd617948c2494f0d31168fed
-vendor/lib64/libsec-ril.so|ee731179933a19d4b914fcfa96dc555a339b12d3
-vendor/lib64/libsec_semRil.so|7987ec9be7bf937438c43fc0b9859f6c9b4b5787
-vendor/lib64/libvkmanager_vendor.so|5942800259d4413321978cd4c71507eaeec86eab
-vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so|ac01bab3a779374005bb6b94e8b354107671d5dc
-vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so|44d2173ab0187ec3460dd54135e2b406bc93b098
-vendor/lib64/vendor.samsung.hardware.radio@2.0.so|e9985c207ffec829a1746af29d45d9da1994805f
-vendor/lib64/vendor.samsung.hardware.radio@2.1.so|12953d8fe923094410dfa0ea983515b0b16e8eba
-
+# Radio - RIL - from N975FXXU6ETLL
+vendor/lib/libprotobuf-cpp-full-3.9.1.so
+vendor/lib64/libprotobuf-cpp-full-3.9.1.so
+vendor/bin/cbd
+vendor/bin/hw/rild
+vendor/etc/mtu-conf.xml
+vendor/etc/pdpcnt-conf.xml
+vendor/lib/libengmode_client.so
+vendor/lib/libreference-ril.so
+vendor/lib/libril.so
+vendor/lib/librilutils.so
+vendor/lib/libsec-ril-dsds.so
+vendor/lib/libsec-ril.so
+vendor/lib/libsec_semRil.so
+vendor/lib/libsecnativefeature.so
+vendor/lib/libsecril-client.so
+vendor/lib/libsemnativecarrierfeature.so
+vendor/lib/libvkmanager_vendor.so
+vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
+vendor/lib/vendor.samsung.hardware.radio.channel@2.0.so
+vendor/lib/vendor.samsung.hardware.radio@2.0.so
+vendor/lib/vendor.samsung.hardware.radio@2.1.so
+vendor/lib64/libengmode_client.so
+vendor/lib64/libreference-ril.so
+vendor/lib64/libril.so
+vendor/lib64/librilutils.so
+vendor/lib64/libsec-ril-dsds.so
+vendor/lib64/libsec-ril.so
+vendor/lib64/libsec_semRil.so
+vendor/lib64/libsecnativefeature.so
+vendor/lib64/libsecril-client.so
+vendor/lib64/libsemnativecarrierfeature.so
+vendor/lib64/libvkmanager_vendor.so
+vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
+vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
+vendor/lib64/vendor.samsung.hardware.radio@2.0.so
+vendor/lib64/vendor.samsung.hardware.radio@2.1.so
 
 # Sensors
 vendor/bin/hw/lhd
