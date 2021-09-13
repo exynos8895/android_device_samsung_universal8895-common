@@ -7,7 +7,7 @@ on init
 on fs
     chown radio system /efs
     chmod 0771 /efs
-	restorecon_recursive /efs
+    restorecon_recursive /efs
     chown radio radio sys/devices/virtual/misc/multipdp/waketime
     chmod 0660 /sys/devices/virtual/misc/umts_dm0/dm_state
     chown radio system /sys/devices/virtual/misc/umts_dm0/dm_state
@@ -25,15 +25,9 @@ on fs
     chown radio system /efs/cpdebug/node
     chmod 0771 /efs/cpdebug/node
 
-on post-fs-data
     # For Samsung members
     chmod 0775 /data/log/err
     chown radio radio /data/log/err
-
-service cpboot-daemon /vendor/bin/cbd -d -tss310 -bm -mm -P platform/11120000.ufs/by-name/RADIO -n /efs
-    class main
-    user root
-    group radio cache inet misc audio sdcard_rw log sdcard_r shell system
 
 # SS/DS configuration
 on property:ro.multisim.simslotcount=*
@@ -44,3 +38,8 @@ on property:ro.multisim.simslotcount=1
 
 on property:ro.multisim.simslotcount=2
     setprop persist.radio.multisim.config dsds
+
+service cpboot-daemon /vendor/bin/cbd -d -tss310 -bm -mm -P platform/11120000.ufs/by-name/RADIO -n /efs
+    class main
+    user root
+    group radio cache inet misc audio sdcard_rw log sdcard_r shell system

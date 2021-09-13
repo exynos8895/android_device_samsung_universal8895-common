@@ -253,9 +253,6 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.4 \
     libxml2
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/ramdisk/etc/ril_config.sh:$(TARGET_COPY_OUT_VENDOR)/etc/ril_config.sh
-
 # SamsungDoze
 PRODUCT_PACKAGES += \
     SamsungDoze

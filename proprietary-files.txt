@@ -264,11 +264,10 @@ lib64/omx/libOMX.Exynos.VP9.Decoder.so
 lib64/omx/libOMX.Exynos.VP9.Encoder.so
 lib64/omx/libOMX.Exynos.WMV.Decoder.so
 
-# RIL
+# Radio - RIL - from N975FXXU6ETLL
+vendor/bin/secril_config_svc
 vendor/etc/init/init.vendor.rilchip.rc
 vendor/etc/init/init.vendor.rilcommon.rc
-
-# Radio - RIL - from N975FXXU6ETLL
 vendor/lib/libprotobuf-cpp-full-3.9.1.so
 vendor/lib64/libprotobuf-cpp-full-3.9.1.so
 vendor/bin/cbd

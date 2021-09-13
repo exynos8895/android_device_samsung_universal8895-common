@@ -875,15 +875,6 @@ on fs
 # ARGOSD network_throughput
     chown system system /dev/network_throughput
 
-    start ril_config
-
-service ril_config /vendor/bin/sh /vendor/etc/ril_config.sh
-    class main
-    user radio
-    oneshot
-    disabled
-
-
 # ARGOSD
 service argos-daemon /vendor/bin/argosd
     class main
