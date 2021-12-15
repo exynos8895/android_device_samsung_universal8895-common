@@ -20,4 +20,4 @@
 /devices/platform/10c00000.usb/10c00000.dwc3*           auto        auto    defaults    voldmanaged=usb:auto
 
 # ZRAM
-/dev/block/zram0                                        none        swap    defaults    zramsize=1073741824
+/dev/block/zram0                                          none        swap      defaults                                                                                                       zramsize=2147483648,max_comp_streams=8
