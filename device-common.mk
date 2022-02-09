@@ -75,6 +75,7 @@ PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
 # Camera
 PRODUCT_PACKAGES += \
+    camera.universal8895 \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     android.hardware.camera.common@1.0 \
