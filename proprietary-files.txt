@@ -108,7 +108,6 @@ vendor/lib64/hw/gps.default.so
 vendor/lib64/libwrappergps.so
 
 # Gatekeeper - from G950FXXS4CRLB
-vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc
 vendor/lib/hw/gatekeeper.exynos8895.so
 vendor/lib64/hw/gatekeeper.exynos8895.so
 
