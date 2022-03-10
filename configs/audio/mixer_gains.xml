@@ -428,8 +428,8 @@
 	<!-- CP Call Output volume -->
 	<!-- NB volume -->
 	<path name="gain-incall_nb-handset">
-		<ctl name="HPOUT3L Input 1 Volume" value="40" />
-		<ctl name="HPOUT3R Input 1 Volume" value="40" />
+		<ctl name="HPOUT3L Input 1 Volume" value="32" />
+		<ctl name="HPOUT3R Input 1 Volume" value="32" />
 	</path>
 
 	<path name="gain-incall_nb-speaker">
@@ -457,8 +457,8 @@
 
 	<!-- WB volume -->
 	<path name="gain-incall_wb-handset">
-		<ctl name="HPOUT3L Input 1 Volume" value="40" />
-		<ctl name="HPOUT3R Input 1 Volume" value="40" />
+		<ctl name="HPOUT3L Input 1 Volume" value="32" />
+		<ctl name="HPOUT3R Input 1 Volume" value="32" />
 	</path>
 
 	<path name="gain-incall_wb-speaker">
@@ -470,15 +470,15 @@
 	<path name="gain-incall_wb-headset">
 		<ctl name="HPOUT2L Impedance Volume" value="112" />
 		<ctl name="HPOUT2R Impedance Volume" value="112" />
-		<ctl name="HPOUT2L Input 1 Volume" value="40" />
-		<ctl name="HPOUT2R Input 1 Volume" value="40" />
+		<ctl name="HPOUT2L Input 1 Volume" value="32" />
+		<ctl name="HPOUT2R Input 1 Volume" value="32" />
 	</path>
 
 	<path name="gain-incall_wb-headphone">
 		<ctl name="HPOUT2L Impedance Volume" value="112" />
 		<ctl name="HPOUT2R Impedance Volume" value="112" />
-		<ctl name="HPOUT2L Input 1 Volume" value="40" />
-		<ctl name="HPOUT2R Input 1 Volume" value="40" />
+		<ctl name="HPOUT2L Input 1 Volume" value="32" />
+		<ctl name="HPOUT2R Input 1 Volume" value="32" />
 	</path>
 
 	<path name="gain-incall_wb-bt-sco-headset">
