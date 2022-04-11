@@ -135,9 +135,11 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 # MACLOADER
 BOARD_HAVE_SAMSUNG_WIFI          := true
 
-# Selinux
-BOARD_SEPOLICY_DIRS += device/samsung/universal8895-common/sepolicy
-BOARD_SEPOLICY_VERS := $(PLATFORM_SDK_VERSION).0
+# Sepolicy
+include device/lineage/sepolicy/exynos/sepolicy.mk
+BOARD_SEPOLICY_TEE_FLAVOR := mobicore
+include device/samsung_slsi/sepolicy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += device/samsung/universal8895-common/sepolicy/vendor
 
 # Ril
 ENABLE_VENDOR_RIL_SERVICE := true
