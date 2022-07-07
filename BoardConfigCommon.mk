@@ -147,7 +147,11 @@ ENABLE_VENDOR_RIL_SERVICE := true
 # Shims
 TARGET_LD_SHIM_LIBS += \
     /system/lib/libexynoscamera.so|/vendor/lib/libexynoscamera_shim.so \
-    /system/lib64/libexynoscamera.so|/vendor/lib64/libexynoscamera_shim.so
+    /system/lib64/libexynoscamera.so|/vendor/lib64/libexynoscamera_shim.so \
+    /system/vendor/lib64/libexynosdisplay.so|/system/vendor/lib64/libexynosdisplay_shim.so \
+    /system/vendor/lib/libexynosdisplay.so|/system/vendor/lib/libexynosdisplay_shim.so \
+    /system/vendor/lib64/hw/hwcomposer.exynos5.so|/system/vendor/lib64/libexynosdisplay_shim.so \
+    /system/vendor/lib/hw/hwcomposer.exynos5.so|/system/vendor/lib/libexynosdisplay_shim.so
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
