@@ -51,9 +51,6 @@ TARGET_2ND_CPU_VARIANT := cortex-a53.a57
 # Binder
 TARGET_USES_64_BIT_BINDER := true
 
-# Apex
-DEXPREOPT_GENERATE_APEX_IMAGE := true
-
 # Extracted with libbootimg
 BOARD_CUSTOM_BOOTIMG := true
 TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
