@@ -1,8 +1,13 @@
 allow kernel app_efs_file:dir search;
-allow kernel app_efs_file:file open;
-allow kernel sensor_factoryapp_efs_file:file open;
+allow kernel app_efs_file:file rw_file_perms;
+allow kernel sensor_factoryapp_efs_file:file rw_file_perms;
 allow kernel efs_file:dir search;
 
 allow kernel device:chr_file { getattr setattr unlink create };
+allow kernel device:blk_file { create setattr };
 allow kernel device:dir create_dir_perms;
 allow kernel self:capability { mknod };
+
+allow kernel sysfs_virtual:dir search;
+allow kernel sysfs_virtual:file r_file_perms;
+dontaudit kernel self:capability { dac_override dac_read_search };

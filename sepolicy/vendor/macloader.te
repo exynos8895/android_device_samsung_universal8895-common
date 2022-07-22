@@ -1,1 +1,2 @@
 allow macloader sysfs_virtual:dir search;
+allow macloader self:capability { chown net_raw };

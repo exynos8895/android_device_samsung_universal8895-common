@@ -12,3 +12,6 @@ type m2m1shot_device, dev_type;
 
 # gps
 type gps_device, dev_type;
+
+# partition
+type tombstones_block_device, dev_type;

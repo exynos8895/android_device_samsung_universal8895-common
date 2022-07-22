@@ -1,0 +1,2 @@
+dontaudit vendor_init vendor_toolbox_exec:file entrypoint;
+allow vendor_init mobicore_data_file:dir getattr;

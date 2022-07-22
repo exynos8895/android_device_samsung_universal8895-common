@@ -1,1 +1,3 @@
 allow nfc sec_efs_file:dir search;
+
+dontaudit nfc init:binder { call transfer };
