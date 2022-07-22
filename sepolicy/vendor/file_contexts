@@ -66,7 +66,6 @@
 
 # mobicore
 /data/misc/mcRegistry(/.*)?        u:object_r:mobicore_data_file:s0
-/data/vendor/mcRegistry(/.*)?      u:object_r:mobicore_vendor_data_file:s0
 
 # camera
 /data/camera(/.*)?                 u:object_r:camera_data_file:s0
