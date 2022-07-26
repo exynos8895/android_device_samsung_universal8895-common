@@ -1,0 +1,21 @@
+
+# lpm does not like being in enforcing, possibly due to the dac_override
+permissive charger;
+
+allow charger { sysfs_power sysfs_battery }:file r_file_perms;
+allow charger { sysfs_graphics sysfs_virtual sysfs_charger sysfs_battery_writable sysfs_power_writable }:file rw_file_perms;
+allow charger sysfs_charger:dir r_dir_perms;
+
+allow charger { app_efs_file efs_file imei_efs_file battery_efs_file }:file rw_file_perms;
+allow charger { app_efs_file efs_file imei_efs_file battery_efs_file }:dir search;
+
+allow charger input_device:{ chr_file file } rw_file_perms;
+allow charger input_device:dir rw_dir_perms;
+
+
+allow charger self:netlink_kobject_uevent_socket { create setopt bind read };
+allow charger self:capability { net_admin sys_tty_config sys_boot };
+
+dontaudit charger self:capability { dac_override dac_read_search };
+
+set_prop(charger,powerctl_prop)
